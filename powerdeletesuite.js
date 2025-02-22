@@ -511,7 +511,8 @@ var pd = {
           $("#pd__central .processing").show();
           pd.actions.page.next();
         } else {
-          alert(validation.reason);
+          console.log("Error: " + validation.reason);
+          // alert(validation.reason);
         }
       });
       $(".pd__q").click(function (e) {
