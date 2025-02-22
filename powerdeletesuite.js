@@ -511,7 +511,7 @@ var pd = {
           $("#pd__central .processing").show();
           pd.actions.page.next();
         } else {
-         alert(validation.reason);\
+          alert(validation.reason);
         }
       });
       $(".pd__q").click(function (e) {
@@ -917,7 +917,11 @@ var pd = {
           function () {
           pd.task.info.errors++;
           if (
-            false
+            confirm(
+              "Error deleting " +
+                (item.kind == "t3" ? "post" : "comment") +
+                ", would you like to retry?"
+            )
           ) {
             pd.actions.children.handleSingle();
           } else {
